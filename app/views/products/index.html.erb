@@ -6,9 +6,9 @@
   </div>
   
   <div class="row">
-    <div class="col-sm-2 col-md-4">  
-      <% @products.each do |product| %>
-        <%= product.image_url %>
+    <% @products.each do |product| %>
+      <div class="col-sm-2 col-md-4"> 
+        <%= link_to image_tag(product.image_url, class: "img-responsive") %>
           <div class="overview">
             <h3><%= product.name %></h3>
             <p><%= product.description %></p>
@@ -18,8 +18,8 @@
               <span><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></span>
             </p>
           </div><!--/overview-->
-        <% end %>
-    </div><!--/col-->
+      </div><!--/col-->
+    <% end %> 
   </div><!--/row-->
 </div><!--/container-->
 <br>
