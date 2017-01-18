@@ -34,7 +34,10 @@ h1, p {
 }
 
 .site-footer {
+	position: absolute;
+	bottom: 0;
   height: 3em;
+  width: 100%;
   text-transform: uppercase;
 	font-weight: 900;
 	display: inline-block;
