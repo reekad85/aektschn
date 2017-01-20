@@ -6,7 +6,9 @@
   </div>
   
   <div class="row">
-    <%= render @products %> 
+    <% @products.each do |product| %>
+      <%= render product %>
+    <% end %>
   </div><!--/row-->
 </div><!--/container-->
 
