@@ -15,7 +15,13 @@ body,
   background: $primaryColor;
 }
 
-h1, h2, p {
+h1, h2 {
+	text-align: center;
+	color: $primaryColor;
+	margin-bottom: 1em;
+}
+
+p {
 	text-align: center;
 	color: $primaryColor;
 }
