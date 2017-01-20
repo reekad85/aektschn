@@ -15,35 +15,11 @@ body,
   background: $primaryColor;
 }
 
-.nav {
-	position: fixed;
-	width: 100%;
-	top: 0;
-	text-transform: uppercase;
-	font-weight: 900;
-	li {
-	display: inline-block;
-	float: left;
-	padding: 1em 1em;
-	}
-}
-
-h1, p {
+h1, h2, p {
 	text-align: center;
 	color: $primaryColor;
 }
 
-.site-footer {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-  height: 3em;
-  width: 100%;
-  text-transform: uppercase;
-	font-weight: 900;
-	display: inline-block;
-	padding: 0.75em 1em;
-}
 
 
 
