@@ -25,10 +25,11 @@
           </button>
         </nav><!--/navbar-header-->
         <nav class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
+          <ul class="nav navbar-nav navbar-left">
+            <li><%= link_to "Home", '/static_pages/landing_page' %> </li>
+            <li><%= link_to "Products", products_path %></li>
+            <li><%= link_to "About", '/static_pages/about' %> </li>
+            <li><%= link_to "Contact", '/static_pages/contact' %></li>
           </ul>
         </nav><!--/nav-collapse-->
       </nav><!--/container nav-->
