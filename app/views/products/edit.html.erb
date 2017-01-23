@@ -1,6 +1,12 @@
-<h1>Editing Product</h1>
+<div class="container-fluid"> 
+  <div class="header">
+   <h1>Editing Product</h1>
+  </div>
 
-<%= render 'form' %>
+	<%= render 'form', product: @product %>
+	
+	<%= link_to 'Show', @product %> |
+	<%= link_to 'Back', products_path %>
+</div><!--/container-->
 
-<%= link_to 'Show', @product %> |
-<%= link_to 'Back', products_path %>
+	

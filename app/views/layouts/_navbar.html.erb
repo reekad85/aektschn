@@ -9,17 +9,19 @@
       </button>
     </nav><!--/navbar-header-->
     <nav class="navbar-collapse collapse">
-      <ul class="nav navbar-nav navbar-left" id="specialtea">
+      <ul class="nav navbar-nav" id="specialtea">
         <li><%= link_to "Home", '/static_pages/landing_page' %> </li>
         <li><%= link_to "Products", products_path %></li>
         <li><%= link_to "About", '/static_pages/about' %> </li>
         <li><%= link_to "Contact", '/static_pages/contact' %></li>
+        <li class="nav-search">
+          <%= form_tag("/products", method: "get") do %>
+            <%= label_tag(:q, "Search for:") %>
+            <%= text_field_tag(:q) %>
+            <%= submit_tag("Search") %>
+          <% end %>
+        </li>
       </ul>
-      <%= form_tag("/products", method: "get") do %>
-        <%= label_tag(:q, "Search for:") %>
-        <%= text_field_tag(:q) %>
-        <%= submit_tag("Search") %>
-      <% end %>
     </nav><!--/nav-collapse-->
   </nav><!--/container nav-->
 </nav><!--end nav-->

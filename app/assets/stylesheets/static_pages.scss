@@ -3,27 +3,22 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-$primaryColor: #000;
+$primaryColor: #dda0dd;
 
 body {
-	margin-top: 4em;
-}
-
-body,
-.navbar {
-  $primaryColor: #dda0dd;
-  background: $primaryColor;
+	background-color: $primaryColor;
+	margin-top: 5em;
 }
 
 h1, h2 {
 	text-align: center;
-	color: $primaryColor;
+	color: #000;
 	margin-bottom: 1em;
 }
 
 p {
 	text-align: center;
-	color: $primaryColor;
+	color: #000;
 }
 
 img {

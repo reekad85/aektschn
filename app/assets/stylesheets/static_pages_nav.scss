@@ -1,3 +1,9 @@
+$primaryColor: #dda0dd;
+
+.navbar {
+	background-color: $primaryColor;
+}
+
 .nav {
 	width: 100%;
 	top: 0;
@@ -7,5 +13,10 @@
 
 #specialtea li {
 	float: left;
+	padding: 1em 1em;
+}
+
+.nav-search {
+	margin: 12px;
 	padding: 1em 1em;
 }
