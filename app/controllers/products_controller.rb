@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     if params[:q]
-      if(Rails.env.development?)
+      search_term = params[:q]
         @products = Product.where("name LIKE ?", "%#{search_term}%")
       else
         # use ilike for case insensitivity on postres
