@@ -8,10 +8,9 @@ class UserMailer < ApplicationMailer
         :subject => "A new contact form message from #{name}")
   end
 
-  def welcome_user(user)
-  @user = user
-    mail(
-    	:to => user.email, 
-    	:subject => "Sign Up Confirmation")
+  def welcome(user)
+    @appname = "Specialtea"
+    mail( :to => user.email,
+          :subject => "Welcome to #{@appname}!")
   end
 end
