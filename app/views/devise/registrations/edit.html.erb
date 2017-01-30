@@ -6,6 +6,14 @@
       <div class="col-md-offset-5 col-md-3">
         <div class="form-login">
           <h3>Edit <%= resource_name.to_s.humanize %></h3>
+           <div class="field">
+            <%= f.label :first_name %><br>
+            <%= f.text_field :first_name %>
+          </div>
+          <div class="field">
+            <%= f.label :last_name %><br>
+            <%= f.text_field :last_name %>
+          </div>
           <div class="field">
             <%= f.label :email %><br />
             <%= f.email_field :email, autofocus: true %>
