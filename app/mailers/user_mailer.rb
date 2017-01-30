@@ -1,4 +1,4 @@
-class UserMailer < ApplicationMailer
+class UserMailer < ActionMailer::Base
 	default from: "hello@specialtea.com"
 
   def contact_form(email, name, message)
@@ -10,7 +10,7 @@ class UserMailer < ApplicationMailer
 
   def welcome_user(user)
   @user = user
-    mail(:from => 'hello@specialtea.com',
+    mail(
     	:to => user.email, 
     	:subject => "Sign Up Confirmation")
   end
