@@ -1,27 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <%= link_to image_tag(@product.image_url, class: "img-responsive") %>
-</p>
+<div class="container fluid">
+	<div class="row">
+		<div class="col-xs-12 col-md-6">
+			<%= image_tag(@product.image_url, class: "img-responsive", data_zoom_image: "#{@product.image_url}") %>
+			<%= link_to 'Edit', edit_product_path(@product) %> |
+			<%= link_to 'Back', products_path %>
+		</div>
+		<div class="col-xs-12 col-md-6">
+			<h2><%= @product.name %></h2>
+			<p><%= @product.description %></p><br>
+			<p><strong><span class="glyphicon glyphicon-tags" aria-hidden="true"></span> </strong><%= @product.price %>€</br>
+			<strong><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> </strong><%= @product.colour %></br></p>
+		</div>
+	</div>
+	<div class="row">
+    	<div class="col-xs-12 col-md-6 ">
+       		<h4><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> User Ratings</h4>			
+			<p><%= @product.highest_rating_comment %></p><br>
+			<p><%= @product.lowest_rating_comment %></p>
+		</div>
+	</div>
+</div>
 
-<p>
-  <strong><%= @product.name %></strong>
-</p>
-
-<p>
-  <%= @product.description %>
-</p>
-
-<p>
-  <%= @product.colour %>
-</p>
-
-<p>
-  <strong><%= @product.price %></strong>
-</p>
 
 
 
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+
+
