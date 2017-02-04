@@ -22,7 +22,7 @@
 			<p><%= @product.highest_rating_comment %></p><br>
 			<p><%= @product.lowest_rating_comment %></p>
 		</div>
-    	<div class="col-xs-12 col-md-6 ">		
+    	<div class="col-xs-12 col-md-6 ">
 			<p><%= render partial: "new_comment" %></p>
     		<p><%= render partial: "comments" %></p>
     		<p><%= will_paginate @comments, :page_links => false, previous_label: "Newer Reviews", next_label: "Older Reviews" %></p>
