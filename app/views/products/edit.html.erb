@@ -4,9 +4,10 @@
   </div>
 
 	<%= render 'form', product: @product %>
-	
-	<%= link_to 'Show', @product %> |
-	<%= link_to 'Back', products_path %>
+	<span class="btn btn-default" role="button">
+		<%= link_to 'Show', @product %> |
+		<%= link_to 'Back', products_path %>
+	</span>
 </div><!--/container-->
 
 	
