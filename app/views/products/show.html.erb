@@ -58,6 +58,7 @@
 			<h2><span><%= @product.name %></span></h2>
 			<p>
 				<%= form_tag "/payments/create", :id => "stripe-btn" do %>
+					<%= hidden_field_tag(:product_id, @product.id) %>
   					<%= render partial: "shared/stripe_checkout_button" %>
 				<% end %>
 			</p>
