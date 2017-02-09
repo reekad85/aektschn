@@ -14,6 +14,7 @@ class ProductsController < ApplicationController
         @products = Product.where("name LIKE ?", "%#{search_term}%")
       end
     else
+      byebug
       @products = Product.all
     end
   end
@@ -74,7 +75,7 @@ class ProductsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    # Use callbacks to share common setup or constraints between actions
     def set_product
       @product = Product.find(params[:id])
     end
