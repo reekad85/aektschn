@@ -4,8 +4,9 @@ describe UsersController, :type => :controller do
 
 	#let(:user_2) { User.create!(email: 'rumu@example.com', password: '0987654321') }
 	#let(:user) { User.create!(email: 'rimi@example.com', password: '0987654321') }
+	
 	before do
-		@user = FactoryGirl.create(:user)
+		@user = FactoryGirl.create!(:user)
 	end
 
 	describe 'GET #show', :type => :controller do

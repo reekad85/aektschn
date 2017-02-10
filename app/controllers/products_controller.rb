@@ -14,7 +14,7 @@ class ProductsController < ApplicationController
         @products = Product.where("name LIKE ?", "%#{search_term}%")
       end
     else
-      byebug
+      #byebug
       @products = Product.all
     end
   end
