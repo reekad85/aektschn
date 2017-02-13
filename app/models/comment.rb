@@ -3,7 +3,7 @@ class Comment < ActiveRecord::Base
   belongs_to :product
 
   scope :rating_desc, -> { order('comments.rating DESC') }
-  scope :rating_asc, -> { order(rating: :asc) }
+  scope :rating_asc, -> { order('comments.rating ASC') }
 
   validates :body, presence: true
   validates :user, presence: true
