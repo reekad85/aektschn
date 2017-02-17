@@ -64,3 +64,7 @@ gem 'stripe'
 gem "brakeman", :require => false
 
 gem 'dalli'
+
+gem 'redis-rails'
+
+gem 'newrelic_rpm'
