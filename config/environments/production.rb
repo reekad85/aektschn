@@ -89,4 +89,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.action_mailer.default_url_options = { host: 'aektschndemo.herokuapp.com' }
+
+  config.web_socket_server_url = "wss://aektschndemo.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://aektschndemo.herokuapp.com', 'http://aektschndemo.herokuapp.com']
 end
