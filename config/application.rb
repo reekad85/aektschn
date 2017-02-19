@@ -1,6 +1,7 @@
-require File.expand_path('../boot', __FILE__)
+require_relative 'boot'
 
-require "rails"
+require 'rails/all'
+
 # Pick the frameworks you want:
 require "active_model/railtie"
 require "active_job/railtie"
@@ -49,4 +50,4 @@ end
         #FactoryGirl.find_definitions
     #end
 
-#end  
+#end 
