@@ -19,7 +19,7 @@ class PaymentsController < ApplicationController
 	    			total: @product.price
 	    		)
 	    		UserMailer.paid_success(@user, @product).deliver_now
-				flash[:success] = "Payment processed successfully"
+				flash[:notice] = "Payment processed successfully"
         end
 			
 
