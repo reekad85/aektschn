@@ -11,6 +11,8 @@ var refreshRating = function() {
 $(document).on('turbolinks:load ajaxSuccess', function() {
     refreshRating();
 
+    $('.alert').delay(2000).fadeOut(1500);
+
     $('.img-zoom').elevateZoom({
 		zoomType: "lens",
   		lensShape: "round",
