@@ -44,7 +44,7 @@ Rails.application.configure do
 
   default_url_options
 
-  config.action_cable.disable_request_forgery_protection = true
+  config.action_cable.url = "ws://localhost:3000/cable"
 
   #config.action_mailer.smtp_settings = {
    # address: "smtp.gmail.com",
