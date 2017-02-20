@@ -67,8 +67,8 @@
 			</p>
 			<p>Average Rating:</p>
 			<p id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></p>
-			<p><%= @product.highest_rating_comment %></p><br>
-			<p><%= @product.lowest_rating_comment %></p>
+			<p>Best Review:</p>
+			<p><%= @product.highest_rating_comment.body %></p><br>
 		</div>
 	</div>
 </div>
