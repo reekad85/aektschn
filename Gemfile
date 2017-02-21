@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.0.0'
+# Use Puma as the app server
+gem 'puma'
 # Use sqlite3 as the database for Active Record
 
 # Use SCSS for stylesheets
@@ -37,9 +39,8 @@ group :development do
   gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  #gem 'spring'
 
-  gem 'puma'
 end
 
 group :development, :test do  
@@ -66,6 +67,8 @@ gem 'stripe'
 gem "brakeman", :require => false
 
 gem 'dalli'
+
+gem 'redis'
 
 gem 'redis-rails'
 
