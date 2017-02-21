@@ -51,7 +51,9 @@
             			<div class="panel-body">
             				<p><%= render partial: "new_comment" %></p>
     						<p><%= render partial: "comments" %></p>
-    						<p><%= will_paginate @comments, :page_links => false, previous_label: "Newer Reviews", next_label: "Older Reviews" %></p>
+    						<div id="paginate">
+    							<p><b><%= will_paginate @comments, :page_links => false, previous_label: "Newer Reviews", next_label: "Older Reviews" %></b></p>
+    						</div>
     					</div><!--/panelbody3-->
           			</div><!--/collThr-->
         		</div><!--/panel3-->

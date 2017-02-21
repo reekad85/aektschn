@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users, skip: [:sessions]
+  get 'users/:id' => 'users#show', as: :user
 	as :user do
   	get 'signin', to: 'devise/sessions#new', as: :new_user_session
   	post 'signin', to: 'devise/sessions#create', as: :user_session
@@ -13,7 +15,7 @@ Rails.application.routes.draw do
   resources :users
   resources :orders, only: [:index, :show, :create, :destroy]
 
-  devise_for :users, skip: [:sessions]
+  
 
   root 'static_pages#landing_page' # could be changed into root 'products#index' if I wanted the customers directly be directed to the productssection
   get 'static_pages/contact'
