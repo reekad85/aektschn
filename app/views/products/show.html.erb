@@ -3,7 +3,7 @@
 <div class="container fluid">
 	<%= image_tag(@product.image_url, class: "img-responsive img-thumbnail img-zoom", data_zoom_image: "@product.image_url") %>
 	<span class="btn btn-default" role="button">
-		<% if signed_in? && current_user.admin? %>
+		<% if current_user && current_user.admin? %>
 			<%= link_to 'Edit'.html_safe , edit_product_path(@product) %> |
 		<% end %>
 		<%= link_to 'Back', products_path %>
