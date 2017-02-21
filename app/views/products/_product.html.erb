@@ -9,7 +9,7 @@
     <% end %>
     <p>
       <span class="btn btn-default" role="button"><%= link_to 'Show', product %>
-        <% if signed_in? && current_user.admin? %>
+        <% if current_user && current_user.admin? %>
           | <%= link_to 'Edit'.html_safe , edit_product_path(product) %> |
           <%= link_to ('<span class="glyphicon glyphicon-remove"></span>').html_safe, product, method: :delete, data: { confirm: 'Are you sure?' } %>
         <% end %>
