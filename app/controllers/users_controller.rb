@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:index, :show]
   before_action :authenticate_user!
   load_and_authorize_resource
-  let :admin :all
 
   # GET /users
   # GET /users.json
